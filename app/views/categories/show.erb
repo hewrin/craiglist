@@ -1,0 +1,18 @@
+<p><%= @category.name %> Category</p>
+<table>
+<tr>
+  <th><%= @category.name %> for Sale</th>
+</tr>
+
+<ul>
+  <% @posts.each do |post| %>
+    <a href="/categories/<%= @category.name %>/posts/<%= post.name %>"><li><%= post.name %></li></a>
+  <% end %>
+</ul>
+</table>
+
+
+
+<br>
+<br>
+<a href="/categories/<%= @category.name %>/posts/new">Create new post</a>
