@@ -11,3 +11,9 @@ get "/categories/:c_id/posts" do
   erb :'categories/show'
 end
 
+post "/create_cat" do
+
+	Category.create(name: params[:category])
+	redirect to '/'
+
+end
